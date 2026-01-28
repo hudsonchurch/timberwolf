@@ -115,10 +115,12 @@ const ScheduleEstimate = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-wolf-blue rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">W</span>
-              </div>
-              <span className="text-white font-bold text-xl">WOLF TREE SERVICE</span>
+              <img 
+                src="/images/Gemini_Generated_Image_x9ud3dx9ud3dx9ud.png" 
+                alt="Timber Wolf Tree Care Logo" 
+                className="w-10 h-10 rounded-lg object-cover"
+              />
+              <span className="text-white font-bold text-xl">TIMBER WOLF TREE CARE</span>
             </div>
 
             {/* Back Button */}
