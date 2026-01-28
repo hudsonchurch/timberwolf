@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -359,7 +359,7 @@ const ScheduleEstimate = () => {
                   <div className="space-y-4">
                     <Button className="wolf-button w-full text-white font-semibold">
                       <Phone className="w-4 h-4 mr-2" />
-                      Call (858) 555-TREE
+                      Call {String.fromCharCode(40)}858{String.fromCharCode(41)} 705-8119
                     </Button>
                     <div className="text-gray-300 text-sm">
                       <p className="flex items-center mb-2">

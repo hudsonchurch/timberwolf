@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -9,6 +9,11 @@ const Gallery = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const galleryItems = [
     {
@@ -113,15 +118,15 @@ const Gallery = () => {
           {isMenuOpen && (
             <nav className="lg:hidden mt-4 pb-4 border-t border-border pt-4">
               <div className="flex flex-col space-y-4">
-                <a href="#" onClick={() => navigate('/services')} className="text-white hover:text-wolf-blue transition-colors">Services</a>
-                <a href="#" onClick={() => navigate('/about')} className="text-white hover:text-wolf-blue transition-colors">About</a>
-                <a href="#" onClick={() => navigate('/locations')} className="text-white hover:text-wolf-blue transition-colors">Locations</a>
-                <a href="#" onClick={() => navigate('/gallery')} className="text-wolf-blue font-semibold">Gallery</a>
-                <a href="#" onClick={() => navigate('/reviews')} className="text-white hover:text-wolf-blue transition-colors">Reviews</a>
-                <a href="#" onClick={() => navigate('/contact')} className="text-white hover:text-wolf-blue transition-colors">Contact</a>
+                <button onClick={() => { navigate('/services'); setIsMenuOpen(false); }} className="text-white hover:text-wolf-blue transition-colors bg-transparent border-none cursor-pointer text-left">Services</button>
+                <button onClick={() => { navigate('/about'); setIsMenuOpen(false); }} className="text-white hover:text-wolf-blue transition-colors bg-transparent border-none cursor-pointer text-left">About</button>
+                <button onClick={() => { navigate('/locations'); setIsMenuOpen(false); }} className="text-white hover:text-wolf-blue transition-colors bg-transparent border-none cursor-pointer text-left">Locations</button>
+                <button onClick={() => { navigate('/gallery'); setIsMenuOpen(false); }} className="text-wolf-blue font-semibold bg-transparent border-none cursor-pointer text-left">Gallery</button>
+                <button onClick={() => { navigate('/reviews'); setIsMenuOpen(false); }} className="text-white hover:text-wolf-blue transition-colors bg-transparent border-none cursor-pointer text-left">Reviews</button>
+                <button onClick={() => { navigate('/contact'); setIsMenuOpen(false); }} className="text-white hover:text-wolf-blue transition-colors bg-transparent border-none cursor-pointer text-left">Contact</button>
                 <Button className="wolf-button text-white font-semibold w-full">
                   <Phone className="w-4 h-4 mr-2" />
-                  (858) 555-TREE
+                  {String.fromCharCode(40)}858{String.fromCharCode(41)} 705-8119
                 </Button>
               </div>
             </nav>
@@ -272,18 +277,18 @@ const Gallery = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Add Your Project to Our Gallery?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Contact Wolf Tree Service today and let us show you the same quality workmanship.
+            Contact Timber Wolf Tree Care today and let us show you the same quality workmanship.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              onClick={() => navigate('/thank-you')}
+              onClick={() => navigate('/contact')}
               className="wolf-button text-white font-semibold px-8 py-4 text-xl"
             >
               Get Free Estimate
             </Button>
             <Button className="wolf-button text-white font-semibold px-8 py-4 text-xl">
               <Phone className="w-5 h-5 mr-3" />
-              Call (858) 555-TREE
+              Call {String.fromCharCode(40)}858{String.fromCharCode(41)} 705-8119
             </Button>
           </div>
         </div>
@@ -297,13 +302,13 @@ const Gallery = () => {
               <div className="w-8 h-8 bg-wolf-blue rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">W</span>
               </div>
-              <span className="text-white font-bold text-lg">WOLF TREE SERVICE</span>
+              <span className="text-white font-bold text-lg">TIMBER WOLF TREE CARE</span>
             </div>
             <p className="text-gray-400 mb-4">
               Professional Tree Care Services in San Diego County Since 1974
             </p>
             <p className="text-gray-500 text-sm">
-              © 2024 Wolf Tree Service. All rights reserved. Licensed & Insured.
+              © 2024 Timber Wolf Tree Care. All rights reserved. Licensed & Insured.
             </p>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -330,20 +330,20 @@ const About = () => {
       {/* CTA Section */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Experience the Wolf Tree Service Difference</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Experience the Timber Wolf Tree Care Difference</h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of satisfied customers who trust us with their tree care needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              onClick={() => navigate('/thank-you')}
+              onClick={() => navigate('/contact')}
               className="wolf-button text-white font-semibold px-8 py-4 text-xl"
             >
               Get Free Estimate
             </Button>
             <Button className="wolf-button text-white font-semibold px-8 py-4 text-xl">
               <Phone className="w-5 h-5 mr-3" />
-              Call (858) 555-TREE
+              Call {String.fromCharCode(40)}858{String.fromCharCode(41)} 705-8119
             </Button>
           </div>
         </div>
@@ -357,13 +357,13 @@ const About = () => {
               <div className="w-8 h-8 bg-wolf-blue rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">W</span>
               </div>
-              <span className="text-white font-bold text-lg">WOLF TREE SERVICE</span>
+              <span className="text-white font-bold text-lg">TIMBER WOLF TREE CARE</span>
             </div>
             <p className="text-gray-400 mb-4">
               Professional Tree Care Services in San Diego County Since 1974
             </p>
             <p className="text-gray-500 text-sm">
-              © 2024 Wolf Tree Service. All rights reserved. Licensed & Insured.
+              © 2024 Timber Wolf Tree Care. All rights reserved. Licensed & Insured.
             </p>
           </div>
         </div>

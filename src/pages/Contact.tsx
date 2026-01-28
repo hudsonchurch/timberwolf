@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -18,6 +18,11 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -392,13 +397,13 @@ const Contact = () => {
               <div className="w-8 h-8 bg-wolf-blue rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">W</span>
               </div>
-              <span className="text-white font-bold text-lg">WOLF TREE SERVICE</span>
+              <span className="text-white font-bold text-lg">TIMBER WOLF TREE CARE</span>
             </div>
             <p className="text-gray-400 mb-4">
               Professional Tree Care Services in San Diego County Since 1974
             </p>
             <p className="text-gray-500 text-sm">
-              © 2024 Wolf Tree Service. All rights reserved. Licensed & Insured.
+              © 2024 Timber Wolf Tree Care. All rights reserved. Licensed & Insured.
             </p>
           </div>
         </div>

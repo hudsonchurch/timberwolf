@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -8,6 +8,11 @@ import { useNavigate } from 'react-router-dom';
 const Reviews = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const reviews = [
     {
@@ -353,14 +358,14 @@ const Reviews = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              onClick={() => navigate('/thank-you')}
+              onClick={() => navigate('/contact')}
               className="wolf-button text-white font-semibold px-8 py-4 text-xl"
             >
               Get Free Estimate
             </Button>
             <Button className="wolf-button text-white font-semibold px-8 py-4 text-xl">
               <Phone className="w-5 h-5 mr-3" />
-              Call (858) 555-TREE
+              Call {String.fromCharCode(40)}858{String.fromCharCode(41)} 705-8119
             </Button>
           </div>
         </div>
@@ -374,13 +379,13 @@ const Reviews = () => {
               <div className="w-8 h-8 bg-wolf-blue rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">W</span>
               </div>
-              <span className="text-white font-bold text-lg">WOLF TREE SERVICE</span>
+              <span className="text-white font-bold text-lg">TIMBER WOLF TREE CARE</span>
             </div>
             <p className="text-gray-400 mb-4">
               Professional Tree Care Services in San Diego County Since 1974
             </p>
             <p className="text-gray-500 text-sm">
-              © 2024 Wolf Tree Service. All rights reserved. Licensed & Insured.
+              © 2024 Timber Wolf Tree Care. All rights reserved. Licensed & Insured.
             </p>
           </div>
         </div>

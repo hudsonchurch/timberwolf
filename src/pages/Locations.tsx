@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -310,21 +310,21 @@ const Locations = () => {
             <div className="max-w-2xl mx-auto bg-background rounded-lg p-8">
               <h3 className="text-2xl font-bold text-white mb-4">Service Area Inquiry</h3>
               <p className="text-gray-300 mb-6">
-                Call us at <span className="text-wolf-blue font-semibold">(858) 555-TREE</span> or email 
-                <span className="text-wolf-blue font-semibold"> info@wolftreeservice.com</span> with your location. 
+                Call us at <span className="text-wolf-blue font-semibold">{String.fromCharCode(40)}858{String.fromCharCode(41)} 705-8119</span> or email
+                <span className="text-wolf-blue font-semibold"> info@timberwolftreecare.com</span> with your location.
                 We'll let you know if we can provide services in your area.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
-                  onClick={() => navigate('/thank-you')}
+                  onClick={() => navigate('/contact')}
                   className="wolf-button text-white font-semibold px-8 py-4 text-xl"
                 >
                   Request Service Quote
                 </Button>
                 <Button className="wolf-button text-white font-semibold px-8 py-4 text-xl">
                   <Phone className="w-5 h-5 mr-3" />
-                  Call (858) 555-TREE
+                  Call {String.fromCharCode(40)}858{String.fromCharCode(41)} 705-8119
                 </Button>
               </div>
             </div>
@@ -340,13 +340,13 @@ const Locations = () => {
               <div className="w-8 h-8 bg-wolf-blue rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">W</span>
               </div>
-              <span className="text-white font-bold text-lg">WOLF TREE SERVICE</span>
+              <span className="text-white font-bold text-lg">TIMBER WOLF TREE CARE</span>
             </div>
             <p className="text-gray-400 mb-4">
               Professional Tree Care Services in San Diego County Since 1974
             </p>
             <p className="text-gray-500 text-sm">
-              © 2024 Wolf Tree Service. All rights reserved. Licensed & Insured.
+              © 2024 Timber Wolf Tree Care. All rights reserved. Licensed & Insured.
             </p>
           </div>
         </div>

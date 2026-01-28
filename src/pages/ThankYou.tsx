@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Phone, CheckCircle, ArrowLeft, Mail } from 'lucide-react';
@@ -6,6 +6,11 @@ import { useNavigate } from 'react-router-dom';
 
 const ThankYou = () => {
   const navigate = useNavigate();
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -18,7 +23,7 @@ const ThankYou = () => {
               <div className="w-10 h-10 bg-wolf-blue rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">W</span>
               </div>
-              <span className="text-white font-bold text-xl">WOLF TREE SERVICE</span>
+              <span className="text-white font-bold text-xl">TIMBER WOLF TREE CARE</span>
             </div>
 
             {/* Back Button */}
@@ -34,7 +39,7 @@ const ThankYou = () => {
             {/* Call Button */}
             <Button className="wolf-button text-white font-semibold px-6 py-2">
               <Phone className="w-4 h-4 mr-2" />
-              (858) 555-TREE
+              {String.fromCharCode(40)}858{String.fromCharCode(41)} 705-8119
             </Button>
           </div>
         </div>
@@ -64,7 +69,7 @@ const ThankYou = () => {
                       <Phone className="w-8 h-8 text-white" />
                     </div>
                     <h4 className="text-lg font-semibold text-white mb-2">Call Us</h4>
-                    <p className="text-2xl font-bold text-wolf-blue mb-2">(858) 555-TREE</p>
+                    <p className="text-2xl font-bold text-wolf-blue mb-2">{String.fromCharCode(40)}858{String.fromCharCode(41)} 705-8119</p>
                     <p className="text-gray-300 text-sm">Available 24/7 for emergencies</p>
                   </div>
                   
@@ -73,7 +78,7 @@ const ThankYou = () => {
                       <Mail className="w-8 h-8 text-white" />
                     </div>
                     <h4 className="text-lg font-semibold text-white mb-2">Email Us</h4>
-                    <p className="text-lg text-wolf-blue mb-2">info@wolftreeservice.com</p>
+                    <p className="text-lg text-wolf-blue mb-2">info@timberwolftreecare.com</p>
                     <p className="text-gray-300 text-sm">We respond within 2 hours</p>
                   </div>
                 </div>
@@ -109,13 +114,13 @@ const ThankYou = () => {
                   className="wolf-button text-white font-semibold px-8 py-3"
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Call Now: (858) 555-TREE
+                  Call Now: {String.fromCharCode(40)}858{String.fromCharCode(41)} 705-8119
                 </Button>
               </div>
 
               <div className="mt-8 text-gray-400 text-sm">
                 <p className="mb-2">
-                  <strong className="text-white">Wolf Tree Service</strong> - San Diego's Most Trusted Tree Care Experts
+                  <strong className="text-white">Timber Wolf Tree Care</strong> - San Diego's Most Trusted Tree Care Experts
                 </p>
                 <p>Licensed & Insured • 50+ Years Experience • 4.9-Star Rating</p>
               </div>

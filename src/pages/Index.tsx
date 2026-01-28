@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -17,6 +17,12 @@ const Index = () => {
     email: '',
     phone: ''
   });
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -382,11 +388,11 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Get Your Free Estimate Today</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Ready to transform your property? Contact Wolf Tree Service for professional tree care in San Diego.
+              Ready to transform your property? Contact Timber Wolf Tree Care for professional tree care in San Diego.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                onClick={() => navigate('/thank-you')}
+                onClick={() => navigate('/contact')}
                 className="wolf-button text-white font-semibold px-8 py-4 text-xl"
               >
                 Schedule Free Estimate
